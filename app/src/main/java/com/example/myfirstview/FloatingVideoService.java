@@ -8,7 +8,7 @@ import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Environment;
 import android.os.IBinder;
-import android.support.annotation.Nullable;
+
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -18,7 +18,6 @@ import android.view.SurfaceView;
 import android.view.View;
 import android.view.WindowManager;
 
-import com.evideostb.kdroid.middleware.util.EvLog;
 
 import java.io.File;
 import java.util.Random;
@@ -59,7 +58,6 @@ public class FloatingVideoService extends Service {
 
     }
 
-    @Nullable
     @Override
     public IBinder onBind(Intent intent) {
         return null;
@@ -154,11 +152,11 @@ public class FloatingVideoService extends Service {
         }
         @Override
         public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
-            EvLog.i("surfaceChanged");
+
         }
         @Override
         public void surfaceDestroyed(SurfaceHolder holder) {
-            EvLog.i("surfaceDestroyed");
+
             stop();
         }
     };
